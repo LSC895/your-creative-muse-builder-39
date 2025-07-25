@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -8,7 +7,7 @@ const About = () => {
   const experiences = [
     {
       role: "Co-Founder & CTO",
-      company: "Lavendr",
+      company: "Lavendr", 
       period: "Mar 2025 - Present",
       description: "Building an AI-powered community site for Gen Z with focus on authentic connections and content creation.",
       achievements: ["AI", "Remote Team", "Vibe Coding"]
@@ -46,7 +45,13 @@ const About = () => {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Hero Section */}
       <div className="text-center mb-12">
-        <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-6"></div>
+        <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20">
+          <img 
+            src="/lovable-uploads/cff4f4f9-614b-4eda-9fbb-c29657da9431.png" 
+            alt="LSC Profile" 
+            className="w-full h-full object-cover"
+          />
+        </div>
         <h1 className="text-4xl font-bold text-foreground mb-4">About Me</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
           I build products that are simple, beautiful, and functional. Currently working on an AI SaaS project, 
