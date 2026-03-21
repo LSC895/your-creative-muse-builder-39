@@ -57,7 +57,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="hidden md:flex items-center space-x-4">
               <ThemeToggle />
               <a 
-                href="https://github.com" 
+                href="https://github.com/LSC895" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
@@ -65,7 +65,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Github className="w-5 h-5" />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/lucky-singh-chauhan-87329b255/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
@@ -73,7 +73,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://x.com/Lsc8954" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
