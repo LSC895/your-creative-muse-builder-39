@@ -6,32 +6,44 @@ import { MapPin, Calendar, ExternalLink, Award, Users, Rocket } from "lucide-rea
 const About = () => {
   const experiences = [
     {
-      role: "Co-Founder & CTO",
-      company: "Lavendr", 
-      period: "Mar 2025 - Present",
-      description: "Building an AI-powered community site for Gen Z with focus on authentic connections and content creation.",
-      achievements: ["AI", "Remote Team", "Vibe Coding"]
+      role: "Founding Engineer – AI/ML & Backend",
+      company: "Freelance / Contract",
+      period: "Mar 2025 – Present",
+      location: "Remote",
+      description: "Architected production-grade LLM applications using RAG, reducing manual data analysis time for clients. Deployed scalable AI APIs via FastAPI and Docker, ensuring 99.9% uptime for automated workflows.",
+      achievements: ["RAG", "FastAPI", "Docker", "LLM"]
     },
     {
-      role: "Co-Founder & CTO",
+      role: "Technical Co-Founder",
       company: "Xtrapp",
-      period: "Nov 2024 - Feb 2025",
-      description: "Led engineering team and built a platform for creators and businesses from scratch using cutting-edge technologies.",
-      achievements: ["Team Lead", "Build from Scratch", "AI/ML"]
+      period: "Nov 2024 – Mar 2025",
+      location: "Gurgaon, India",
+      description: "Designed a scalable backend for creator monetization, integrating AI-driven content moderation and recommendation logic. Led technical strategy and infrastructure deployment on GCP, enabling rapid MVP iteration.",
+      achievements: ["GCP", "AI/ML", "System Design", "MVP"]
     },
     {
-      role: "Trainee Engineer",
-      company: "Cloud Solutions",
-      period: "Jul 2022 - Sep 2022", 
-      description: "Worked with senior engineers and built best-in-class cloud technology and approaches for scalable solutions.",
-      achievements: ["Cloud", "Teamwork", "Learning"]
+      role: "Engineer Trainee",
+      company: "Go Earner",
+      period: "Jul 2023 – Sep 2023",
+      location: "New Delhi, India",
+      description: "Automated CI/CD pipelines using GitHub Actions, reducing deployment errors by 40%. Optimized cloud resource allocation, cutting infrastructure costs for ML services.",
+      achievements: ["CI/CD", "GitHub Actions", "Cloud", "ML"]
     }
   ];
 
-  const skills = [
-    "Product Strategy", "Team Building", "MVP Building", 
-    "Low-code AI Tools", "Python", "AWS/Cloud Architecture", 
-    "Fundraising", "Go-to-Market", "Remote Leadership"
+  const skillCategories = [
+    {
+      category: "AI/LLM",
+      skills: ["GPT-4, Claude", "Fine-tuning", "RAG", "Prompt Engineering", "Vector DBs"]
+    },
+    {
+      category: "Backend",
+      skills: ["Python", "FastAPI", "WebSockets", "Asyncio", "REST APIs", "System Architecture & Scaling"]
+    },
+    {
+      category: "MLOps",
+      skills: ["Docker & Containerization", "CI/CD", "AWS, GCP", "Kubernetes", "Monitoring & Observability"]
+    }
   ];
 
   const stats = [
@@ -54,7 +66,7 @@ const About = () => {
         </div>
         <h1 className="text-4xl font-bold text-foreground mb-4">About Me</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          I build products that are simple, beautiful, and functional. Currently working on an AI SaaS project, 
+          I build products that are simple, beautiful, and functional. Currently working on AI/ML engineering,
           but open to collaborating with other innovators who are ready to change the world.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6 text-muted-foreground">
@@ -105,7 +117,10 @@ const About = () => {
                       {exp.company}
                     </CardDescription>
                   </div>
-                  <Badge variant="outline" className="w-fit group-hover:border-cyan-300 dark:group-hover:border-cyan-700 group-hover:text-cyan-700 dark:group-hover:text-cyan-300 transition-colors duration-300">{exp.period}</Badge>
+                  <div className="flex flex-col items-end gap-1">
+                    <Badge variant="outline" className="w-fit group-hover:border-cyan-300 dark:group-hover:border-cyan-700 group-hover:text-cyan-700 dark:group-hover:text-cyan-300 transition-colors duration-300">{exp.period}</Badge>
+                    <span className="text-xs text-muted-foreground">{exp.location}</span>
+                  </div>
                 </div>
                 <p className="text-muted-foreground leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors duration-300">{exp.description}</p>
               </CardHeader>
@@ -126,17 +141,24 @@ const About = () => {
       {/* Skills */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-6">Skills & Expertise</h2>
-        <Card className="group cursor-pointer transition-all duration-500 hover:bg-gradient-to-br hover:from-rose-50/50 hover:via-pink-50/30 hover:to-red-50/50 dark:hover:from-rose-950/20 dark:hover:via-pink-950/10 dark:hover:to-red-950/20 hover:shadow-xl hover:shadow-rose-500/10 dark:hover:shadow-rose-400/5 hover:border-rose-200 dark:hover:border-rose-800/50 hover:-translate-y-1">
-          <CardContent className="pt-6">
-            <div className="flex flex-wrap gap-3">
-              {skills.map((skill) => (
-                <Badge key={skill} variant="outline" className="text-sm py-1 px-3 group-hover:border-rose-300 dark:group-hover:border-rose-700 group-hover:text-rose-700 dark:group-hover:text-rose-300 transition-colors duration-300">
-                  {skill}
-                </Badge>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+        <div className="grid md:grid-cols-3 gap-6">
+          {skillCategories.map((cat) => (
+            <Card key={cat.category} className="group cursor-pointer transition-all duration-500 hover:bg-gradient-to-br hover:from-rose-50/50 hover:via-pink-50/30 hover:to-red-50/50 dark:hover:from-rose-950/20 dark:hover:via-pink-950/10 dark:hover:to-red-950/20 hover:shadow-xl hover:shadow-rose-500/10 dark:hover:shadow-rose-400/5 hover:border-rose-200 dark:hover:border-rose-800/50 hover:-translate-y-1">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-lg group-hover:text-rose-700 dark:group-hover:text-rose-300 transition-colors duration-300">{cat.category}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {cat.skills.map((skill) => (
+                    <Badge key={skill} variant="outline" className="text-xs py-1 px-2 group-hover:border-rose-300 dark:group-hover:border-rose-700 group-hover:text-rose-700 dark:group-hover:text-rose-300 transition-colors duration-300">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </section>
 
       {/* Personal */}
@@ -168,10 +190,10 @@ const About = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild className="group-hover:bg-blue-600 group-hover:hover:bg-blue-700 transition-colors duration-300">
-                <a href="mailto:hello@lsc.com">Email Me</a>
+                <a href="mailto:luckysinghchauhan415@gmail.com">Email Me</a>
               </Button>
               <Button variant="outline" asChild className="group-hover:border-blue-300 dark:group-hover:border-blue-700 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/lucky-singh-chauhan-87329b255/" target="_blank" rel="noopener noreferrer">
                   LinkedIn <ExternalLink className="ml-2 w-4 h-4" />
                 </a>
               </Button>

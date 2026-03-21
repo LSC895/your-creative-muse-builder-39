@@ -251,7 +251,7 @@ const Guestbook = () => {
           Want to have a longer conversation?
         </p>
         <Button asChild>
-          <a href="mailto:hello@lsc.com">Send me an email</a>
+          <a href="mailto:luckysinghchauhan415@gmail.com">Send me an email</a>
         </Button>
       </div>
     </div>

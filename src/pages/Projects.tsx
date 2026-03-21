@@ -6,59 +6,45 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "Tatav",
+      description: "Cognitive Architecture Engine — The missing piece between LLMs and truly persistent digital beings.",
+      technologies: ["Python", "LangChain", "ChromaDB", "FastAPI", "Claude API"],
+      category: "AI/Cognitive",
+      status: "In Development",
+      period: "May 2025 – Present",
+      liveUrl: null,
+      githubUrl: null,
+    },
+    {
+      title: "Vaani",
+      description: "Speek more! Stress less! — Built a tool for individuals with serious speech disorder to help them improve it.",
+      technologies: ["Whisper", "Supabase", "STT", "Clerk"],
+      category: "Health Tech",
+      status: "In Development",
+      period: "Nov 2025 – Present",
+      liveUrl: null,
+      githubUrl: null,
+    },
+    {
       title: "Rezoome",
-      description: "Currently developing an AI-powered SaaS solution that automates resume building processes using machine learning. Built with modern tech stack focusing on scalability and user experience.",
-      technologies: ["Bolt.ai", "OpenRouter", "Python", "Hugging Face"],
+      description: "One resume for every job! — Developed an NLP-based resume analysis and generation system. Implemented text parsing, keyword extraction, and ATS-aligned formatting logic. Generated 100+ resumes with automated content optimisation.",
+      technologies: ["NLP", "Python", "AI/ML", "ATS"],
       category: "AI/SaaS",
       status: "In Development",
-      liveUrl: "https://rezoome-ai.com",
+      period: "Jul 2025 – Present",
+      liveUrl: null,
       githubUrl: null,
     },
     {
-      title: "E-commerce Analytics Tool",
-      description: "A comprehensive analytics dashboard for e-commerce businesses to track sales, customer behavior, and inventory. Helped multiple small businesses optimize their operations.",
-      technologies: ["Vue.js", "Express.js", "MongoDB", "Chart.js"],
-      category: "Analytics",
-      status: "Live",
-      liveUrl: "https://ecommerce-analytics.com",
-      githubUrl: "https://github.com/yourusername/ecommerce-analytics",
-    },
-    {
-      title: "Task Management App",
-      description: "A simple yet powerful task management application with team collaboration features. Designed with focus on user experience and productivity enhancement.",
-      technologies: ["React", "Firebase", "Material-UI", "PWA"],
-      category: "Productivity",
-      status: "Live", 
-      liveUrl: "https://task-manager-app.com",
-      githubUrl: "https://github.com/yourusername/task-manager",
-    },
-    {
-      title: "Local Business Directory",
-      description: "A location-based business directory platform connecting local businesses with customers. Features include reviews, ratings, and business analytics.",
-      technologies: ["Next.js", "Supabase", "Tailwind CSS", "Google Maps API"],
-      category: "Web Platform",
-      status: "Beta",
-      liveUrl: "https://local-directory.com",
+      title: "CHETNA",
+      description: "Self-Learning AI Architecture — A behavioral learning system that updates agent personality from lived experience — no retraining, no human intervention.",
+      technologies: ["Python", "NumPy", "SQLite", "ChromaDB"],
+      category: "AI Research",
+      status: "In Development",
+      period: "Mar 2026 – Present",
+      liveUrl: null,
       githubUrl: null,
     },
-    {
-      title: "Personal Finance Tracker",
-      description: "A secure personal finance tracking application with budget planning and expense categorization. Built with privacy and security as top priorities.",
-      technologies: ["React Native", "Node.js", "MySQL", "JWT"],
-      category: "Mobile App",
-      status: "Live",
-      liveUrl: "https://finance-tracker.app",
-      githubUrl: "https://github.com/yourusername/finance-tracker",
-    },
-    {
-      title: "Code Snippet Manager",
-      description: "A developer tool for organizing and sharing code snippets with syntax highlighting and tagging system. Popular among development teams for knowledge sharing.",
-      technologies: ["Angular", "Express.js", "PostgreSQL", "Prism.js"],
-      category: "Developer Tool",
-      status: "Live",
-      liveUrl: "https://snippet-manager.dev",
-      githubUrl: "https://github.com/yourusername/snippet-manager",
-    }
   ];
 
   const getStatusColor = (status: string) => {
@@ -75,8 +61,8 @@ const Projects = () => {
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-foreground mb-6">Projects</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          A collection of 6 products I've built over the past 2 years. 
-          From simple tools to complex SaaS platforms, each project taught me something new.
+          A collection of AI/ML products I'm building. 
+          From cognitive architectures to health tech, each project pushes boundaries.
         </p>
       </div>
 
@@ -94,6 +80,7 @@ const Projects = () => {
                 <Badge className={`border transition-colors duration-300 ${getStatusColor(project.status)}`}>
                   {project.status}
                 </Badge>
+                <span className="text-sm text-muted-foreground">{project.period}</span>
               </div>
               
               <h2 className="text-2xl font-bold text-foreground mb-4 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
@@ -116,11 +103,13 @@ const Projects = () => {
               </div>
               
               <div className="flex items-center gap-4">
-                <Button size="sm" asChild className="group-hover:bg-blue-600 group-hover:hover:bg-blue-700 transition-colors duration-300">
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                    View Live <ExternalLink className="ml-2 w-3 h-3" />
-                  </a>
-                </Button>
+                {project.liveUrl && (
+                  <Button size="sm" asChild className="group-hover:bg-blue-600 group-hover:hover:bg-blue-700 transition-colors duration-300">
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      View Live <ExternalLink className="ml-2 w-3 h-3" />
+                    </a>
+                  </Button>
+                )}
                 {project.githubUrl && (
                   <Button variant="outline" size="sm" asChild className="group-hover:border-blue-300 dark:group-hover:border-blue-700 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
@@ -138,7 +127,7 @@ const Projects = () => {
       <div className="text-center mt-16 pt-8 border-t border-border/40">
         <p className="text-muted-foreground mb-6">Interested in collaborating or have questions about any project?</p>
         <Button asChild>
-          <a href="mailto:hello@lsc.com">Get in Touch</a>
+          <a href="mailto:luckysinghchauhan415@gmail.com">Get in Touch</a>
         </Button>
       </div>
     </div>
