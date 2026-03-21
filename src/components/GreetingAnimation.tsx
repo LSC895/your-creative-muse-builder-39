@@ -19,8 +19,8 @@ const GreetingAnimation = ({ onComplete }: { onComplete: () => void }) => {
   ];
 
   useEffect(() => {
-    let greetingInterval: NodeJS.Timeout;
-    let hideTimeout: NodeJS.Timeout;
+    let greetingInterval: ReturnType<typeof setInterval>;
+    let hideTimeout: ReturnType<typeof setTimeout>;
 
     // Cycle through greetings
     greetingInterval = setInterval(() => {
