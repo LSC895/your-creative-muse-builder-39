@@ -168,7 +168,7 @@ const About = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button asChild className="group-hover:bg-blue-600 group-hover:hover:bg-blue-700 transition-colors duration-300">
-                <a href="mailto:hello@lsc.com">Email Me</a>
+                <a href="mailto:luckysinghchauhan415@gmail.com">Email Me</a>
               </Button>
               <Button variant="outline" asChild className="group-hover:border-blue-300 dark:group-hover:border-blue-700 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
                 <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
