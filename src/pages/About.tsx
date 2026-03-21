@@ -171,7 +171,7 @@ const About = () => {
                 <a href="mailto:luckysinghchauhan415@gmail.com">Email Me</a>
               </Button>
               <Button variant="outline" asChild className="group-hover:border-blue-300 dark:group-hover:border-blue-700 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/lucky-singh-chauhan-87329b255/" target="_blank" rel="noopener noreferrer">
                   LinkedIn <ExternalLink className="ml-2 w-4 h-4" />
                 </a>
               </Button>

@@ -138,7 +138,7 @@ const Projects = () => {
       <div className="text-center mt-16 pt-8 border-t border-border/40">
         <p className="text-muted-foreground mb-6">Interested in collaborating or have questions about any project?</p>
         <Button asChild>
-          <a href="mailto:hello@lsc.com">Get in Touch</a>
+          <a href="mailto:luckysinghchauhan415@gmail.com">Get in Touch</a>
         </Button>
       </div>
     </div>

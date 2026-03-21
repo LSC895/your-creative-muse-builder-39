@@ -154,7 +154,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
           <div className="text-center">
             <p className="text-muted-foreground text-sm">
-              © 2024 LSC. Sharing the journey of a tech entrepreneur.
+              © 2025 LSC. Sharing the journey of a tech entrepreneur.
             </p>
           </div>
         </div>
