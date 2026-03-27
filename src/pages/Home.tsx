@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight, ExternalLink, Calendar } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Calendar, Github, ExternalLink, BadgeCheck, FlaskConical } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import GreetingAnimation from "../components/GreetingAnimation";
@@ -9,6 +9,8 @@ import TechMarquee from "../components/TechMarquee";
 import ToolsDock from "../components/ToolsDock";
 import CareerTimeline from "../components/CareerTimeline";
 import ContactCTA from "../components/ContactCTA";
+import TypewriterEffect from "../components/TypewriterEffect";
+import SearchPalette from "../components/SearchPalette";
 
 const Home = () => {
   const [showGreeting, setShowGreeting] = useState(true);
@@ -20,6 +22,7 @@ const Home = () => {
       description: "The missing piece between LLMs and truly persistent digital beings.",
       tech: ["Python", "LangChain", "ChromaDB", "FastAPI", "Claude API"],
       period: "May 2025 – Present",
+      github: "https://github.com/LSC895",
     },
     {
       title: "Vaani",
@@ -27,6 +30,7 @@ const Home = () => {
       description: "Built a tool for individuals with serious speech disorder to help them improve it.",
       tech: ["Whisper", "Supabase", "STT", "Clerk"],
       period: "Nov 2025 – Present",
+      github: "https://github.com/LSC895",
     },
     {
       title: "Rezoome",
@@ -34,6 +38,7 @@ const Home = () => {
       description: "NLP-based resume analysis and generation system. Generated 100+ resumes with automated content optimisation.",
       tech: ["NLP", "Python", "AI/ML", "ATS"],
       period: "Jul 2025 – Present",
+      github: "https://github.com/LSC895",
     },
     {
       title: "CHETNA",
@@ -41,6 +46,7 @@ const Home = () => {
       description: "A behavioral learning system that updates agent personality from lived experience — no retraining, no human intervention.",
       tech: ["Python", "NumPy", "SQLite", "ChromaDB"],
       period: "Mar 2026 – Present",
+      github: "https://github.com/LSC895",
     },
   ];
 
@@ -69,56 +75,82 @@ const Home = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6">
       {/* Hero Section */}
-      <section className="pt-28 sm:pt-36 pb-16 sm:pb-24">
-        <ScrollReveal>
-          <div className="flex items-center gap-3 mb-6">
-            <motion.div
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-2.5 h-2.5 rounded-full bg-green-500 shadow-md shadow-green-500/50"
-            />
-            <span className="text-sm font-medium text-muted-foreground">
-              Available for new projects
-            </span>
+      <section id="hero" className="pt-28 sm:pt-36 pb-16 sm:pb-24">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+          <div className="flex-1">
+            <ScrollReveal>
+              <div className="flex items-center gap-3 mb-6">
+                <motion.div
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="w-2.5 h-2.5 rounded-full bg-green-500 shadow-md shadow-green-500/50"
+                />
+                <span className="text-sm font-medium text-green-500">
+                  Available for new projects
+                </span>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.1}>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-2 tracking-tight leading-[1.1]">
+                Hi, I'm Lucky
+                <BadgeCheck className="inline-block w-7 h-7 ml-2 text-blue-500 align-middle" />
+                <br />
+                <span className="text-muted-foreground">Singh Chauhan</span>
+              </h1>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.15}>
+              <div className="text-xl sm:text-2xl font-semibold text-muted-foreground mb-6 h-8">
+                <TypewriterEffect />
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <p className="text-lg text-muted-foreground max-w-xl leading-relaxed mb-8">
+                AI/ML Engineer building intelligent systems — from cognitive architectures
+                to production-grade LLM applications.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <div className="flex flex-wrap gap-3">
+                <Badge variant="secondary" className="px-3 py-1.5 text-sm bg-accent/80">
+                  🧠 AI/ML Engineer
+                </Badge>
+                <Badge variant="secondary" className="px-3 py-1.5 text-sm bg-accent/80">
+                  ⚡ Founding Engineer
+                </Badge>
+                <Badge variant="secondary" className="px-3 py-1.5 text-sm bg-accent/80">
+                  🚀 Builder
+                </Badge>
+              </div>
+            </ScrollReveal>
           </div>
-        </ScrollReveal>
 
-        <ScrollReveal delay={0.1}>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4 tracking-tight leading-[1.1]">
-            Hi, I'm Lucky
-            <br />
-            <span className="text-muted-foreground">Singh Chauhan</span>
-          </h1>
-        </ScrollReveal>
-
-        <ScrollReveal delay={0.2}>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed mb-8">
-            AI/ML Engineer building intelligent systems — from cognitive architectures 
-            to production-grade LLM applications.
-          </p>
-        </ScrollReveal>
-
-        <ScrollReveal delay={0.3}>
-          <div className="flex flex-wrap gap-3">
-            <Badge variant="secondary" className="px-3 py-1.5 text-sm bg-accent/80">
-              🧠 AI/ML Engineer
-            </Badge>
-            <Badge variant="secondary" className="px-3 py-1.5 text-sm bg-accent/80">
-              ⚡ Founding Engineer
-            </Badge>
-            <Badge variant="secondary" className="px-3 py-1.5 text-sm bg-accent/80">
-              🚀 Builder
-            </Badge>
-          </div>
-        </ScrollReveal>
+          {/* Profile Photo Card */}
+          <ScrollReveal delay={0.2}>
+            <div className="relative">
+              <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl border-2 border-border/40 bg-accent/30 overflow-hidden shadow-2xl shadow-primary/5">
+                <div className="w-full h-full flex items-center justify-center text-6xl">
+                  🧑‍💻
+                </div>
+              </div>
+              <div className="absolute -bottom-2 -right-2 px-3 py-1 rounded-full bg-green-500/20 border border-green-500/40 text-green-500 text-xs font-medium">
+                ✦ Open to work
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
       </section>
 
       {/* Tech Stack Marquee */}
-      <section className="py-12 sm:py-16">
+      <section id="tech-stack" className="py-12 sm:py-16">
         <ScrollReveal>
-          <p className="text-xs font-medium text-muted-foreground/60 uppercase tracking-widest mb-6 text-center">
-            Technologies I work with
-          </p>
+          <div className="flex items-center gap-4 mb-8">
+            <h2 className="text-lg font-semibold text-foreground whitespace-nowrap">Tech Stack</h2>
+            <div className="flex-1 h-px bg-border/40" />
+          </div>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <TechMarquee />
@@ -126,27 +158,22 @@ const Home = () => {
       </section>
 
       {/* Career Timeline */}
-      <section className="py-12 sm:py-16">
+      <section id="career" className="py-12 sm:py-16">
         <ScrollReveal>
-          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-            Career Path
-          </h2>
-          <p className="text-muted-foreground mb-10">
-            Building at the intersection of AI and product engineering.
-          </p>
+          <div className="flex items-center gap-4 mb-8">
+            <h2 className="text-lg font-semibold text-foreground whitespace-nowrap">Career Path</h2>
+            <div className="flex-1 h-px bg-border/40" />
+          </div>
         </ScrollReveal>
         <CareerTimeline />
       </section>
 
       {/* Tools Dock */}
-      <section className="py-12 sm:py-16">
+      <section id="tools" className="py-12 sm:py-16">
         <ScrollReveal>
-          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2 text-center">
-            Daily Tools
+          <h2 className="text-center text-lg font-mono text-muted-foreground mb-10">
+            {"{ "}Crafting with my Core Tools{" }"}
           </h2>
-          <p className="text-muted-foreground mb-10 text-center">
-            Crafting with my core stack
-          </p>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <ToolsDock />
@@ -154,20 +181,14 @@ const Home = () => {
       </section>
 
       {/* Selected Projects */}
-      <section className="py-12 sm:py-16">
+      <section id="projects" className="py-12 sm:py-16">
         <ScrollReveal>
-          <div className="flex items-center justify-between mb-10">
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-                Selected Projects
-              </h2>
-              <p className="text-muted-foreground">
-                Things I'm building right now
-              </p>
-            </div>
+          <div className="flex items-center gap-4 mb-8">
+            <h2 className="text-lg font-semibold text-foreground whitespace-nowrap">Selected Projects</h2>
+            <div className="flex-1 h-px bg-border/40" />
             <Link
               to="/projects"
-              className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300"
+              className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 whitespace-nowrap"
             >
               View all
               <ArrowRight className="w-4 h-4" />
@@ -180,72 +201,91 @@ const Home = () => {
             <ScrollReveal key={project.title} delay={index * 0.1}>
               <motion.div
                 whileHover={{ y: -4 }}
-                className="group rounded-2xl border border-border/40 p-5 sm:p-6 bg-card/50 backdrop-blur-sm hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 h-full"
+                className="group rounded-2xl border border-border/40 bg-card/50 backdrop-blur-sm hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 h-full overflow-hidden"
               >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-medium text-muted-foreground/60">
-                    {project.period}
+                {/* Project preview image area */}
+                <div className="h-36 sm:h-40 bg-accent/30 border-b border-border/20 flex items-center justify-center">
+                  <span className="text-4xl opacity-60">
+                    {project.title === "Tatav" && "🧠"}
+                    {project.title === "Vaani" && "🗣️"}
+                    {project.title === "Rezoome" && "📄"}
+                    {project.title === "CHETNA" && "🤖"}
                   </span>
-                  <div className="w-2 h-2 rounded-full bg-green-500/60" />
                 </div>
 
-                <h3 className="text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
-                  {project.title}
-                </h3>
-                <p className="text-sm font-medium text-muted-foreground mb-2">
-                  {project.tagline}
-                </p>
-                <p className="text-sm text-muted-foreground/80 leading-relaxed mb-4">
-                  {project.description}
-                </p>
+                <div className="p-5 sm:p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-medium text-muted-foreground/60">
+                      {project.period}
+                    </span>
+                    <div className="flex items-center gap-2">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                        <Github className="w-4 h-4" />
+                      </a>
+                      <ExternalLink className="w-4 h-4 text-muted-foreground/40" />
+                    </div>
+                  </div>
 
-                <div className="flex flex-wrap gap-1.5">
-                  {project.tech.slice(0, 4).map((t) => (
-                    <Badge
-                      key={t}
-                      variant="outline"
-                      className="text-xs px-2 py-0.5 bg-transparent border-border/40"
-                    >
-                      {t}
-                    </Badge>
-                  ))}
-                  {project.tech.length > 4 && (
-                    <Badge variant="outline" className="text-xs px-2 py-0.5 bg-transparent border-border/40">
-                      +{project.tech.length - 4}
-                    </Badge>
-                  )}
+                  <h3 className="text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm font-medium text-muted-foreground mb-2">
+                    {project.tagline}
+                  </p>
+                  <p className="text-sm text-muted-foreground/80 leading-relaxed mb-4">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.tech.slice(0, 4).map((t) => (
+                      <Badge
+                        key={t}
+                        variant="outline"
+                        className="text-xs px-2 py-0.5 bg-transparent border-border/40"
+                      >
+                        {t}
+                      </Badge>
+                    ))}
+                    {project.tech.length > 4 && (
+                      <Badge variant="outline" className="text-xs px-2 py-0.5 bg-transparent border-border/40">
+                        +{project.tech.length - 4}
+                      </Badge>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             </ScrollReveal>
           ))}
         </div>
+      </section>
 
-        <div className="sm:hidden mt-6 text-center">
-          <Link
-            to="/projects"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300"
+      {/* Experiments Section */}
+      <section className="py-12 sm:py-16">
+        <ScrollReveal>
+          <motion.div
+            className="text-center py-12 rounded-2xl border border-dashed border-border/40"
+            whileHover={{ borderColor: "hsl(var(--primary) / 0.3)" }}
           >
-            View all projects
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
+            <FlaskConical className="w-10 h-10 mx-auto mb-4 text-muted-foreground/40" />
+            <h3 className="text-xl font-bold text-foreground mb-2">
+              Secret Research Ongoing
+            </h3>
+            <p className="text-sm text-muted-foreground/60 italic">
+              Some experiments are best left unseen... for now 🔬
+            </p>
+          </motion.div>
+        </ScrollReveal>
       </section>
 
       {/* Recent Articles */}
-      <section className="py-12 sm:py-16">
+      <section id="articles" className="py-12 sm:py-16">
         <ScrollReveal>
-          <div className="flex items-center justify-between mb-10">
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-                Recent Writing
-              </h2>
-              <p className="text-muted-foreground">
-                Thoughts on AI, startups, and building
-              </p>
-            </div>
+          <div className="flex items-center gap-4 mb-8">
+            <h2 className="text-lg font-semibold text-foreground whitespace-nowrap">Recent Writing</h2>
+            <div className="flex-1 h-px bg-border/40" />
             <Link
               to="/blog"
-              className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300"
+              className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 whitespace-nowrap"
             >
               All articles
               <ArrowRight className="w-4 h-4" />
@@ -279,7 +319,12 @@ const Home = () => {
       </section>
 
       {/* Contact CTA */}
-      <ContactCTA />
+      <section id="contact">
+        <ContactCTA />
+      </section>
+
+      {/* Search Palette */}
+      <SearchPalette />
     </div>
   );
 };
