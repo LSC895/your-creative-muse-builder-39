@@ -11,6 +11,7 @@ import CareerTimeline from "../components/CareerTimeline";
 import ContactCTA from "../components/ContactCTA";
 import TypewriterEffect from "../components/TypewriterEffect";
 import SearchPalette from "../components/SearchPalette";
+import AskLucky from "../components/AskLucky";
 import profileAvatar from "@/assets/profile-avatar.png";
 
 const Home = () => {
@@ -131,7 +132,7 @@ const Home = () => {
           {/* Profile Photo Card */}
           <ScrollReveal delay={0.2}>
             <div className="relative">
-              <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl border-2 border-border/40 bg-accent/30 overflow-hidden shadow-2xl shadow-primary/5">
+              <div className="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-3xl border-2 border-border/40 bg-accent/30 overflow-hidden shadow-2xl shadow-primary/5">
                 <img src={profileAvatar} alt="Lucky Singh Chauhan" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-2 -right-2 px-3 py-1 rounded-full bg-green-500/20 border border-green-500/40 text-green-500 text-xs font-medium">
@@ -276,53 +277,7 @@ const Home = () => {
       {/* ASK LUCKY Chatbot Widget */}
       <section className="py-12 sm:py-16">
         <ScrollReveal>
-          <motion.div
-            className="rounded-2xl border border-border/40 overflow-hidden"
-            style={{ backgroundColor: "#0a0a0a" }}
-            whileHover={{ borderColor: "hsl(var(--primary) / 0.3)" }}
-          >
-            {/* Header */}
-            <div className="flex items-center gap-3 px-6 py-4 border-b border-border/20">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white" style={{ backgroundColor: "#1D9E75" }}>
-                L
-              </div>
-              <div className="flex-1">
-                <h3 className="text-base font-bold text-white font-mono">ASK L.U.C.K.Y</h3>
-                <p className="text-xs text-neutral-500 font-mono">Linguistic Unit for Consulting & Knowledge for You</p>
-              </div>
-              <div className="w-2 h-2 rounded-full bg-green-500 shadow-md shadow-green-500/50" />
-            </div>
-
-            {/* Chat Content */}
-            <div className="px-6 py-8 space-y-6">
-              {/* Message bubble */}
-              <div className="flex gap-3">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0" style={{ backgroundColor: "#1D9E75" }}>
-                  L
-                </div>
-                <div className="px-4 py-3 rounded-2xl rounded-tl-sm bg-neutral-800/80 border border-neutral-700/50 max-w-sm">
-                  <p className="text-sm text-neutral-300 font-mono">hey. before we talk — tell me why you're here.</p>
-                </div>
-              </div>
-
-              {/* Who are you label */}
-              <p className="text-xs font-mono uppercase tracking-widest text-neutral-500 pl-11">Who are you?</p>
-
-              {/* Selection buttons */}
-              <div className="flex flex-wrap gap-3 pl-11">
-                {["hiring", "collab", "just curious"].map((option) => (
-                  <motion.button
-                    key={option}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-5 py-2.5 rounded-xl border border-neutral-700 text-neutral-400 font-mono text-sm hover:border-[#1D9E75] hover:text-[#1D9E75] transition-all duration-300 bg-transparent cursor-pointer"
-                  >
-                    {option}
-                  </motion.button>
-                ))}
-              </div>
-            </div>
-          </motion.div>
+          <AskLucky />
         </ScrollReveal>
       </section>
 
