@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight, Calendar, Github, ExternalLink, BadgeCheck, FlaskConical } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Calendar, Github, ExternalLink, BadgeCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import GreetingAnimation from "../components/GreetingAnimation";
