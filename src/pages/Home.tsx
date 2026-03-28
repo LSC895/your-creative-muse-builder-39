@@ -255,22 +255,73 @@ const Home = () => {
             </ScrollReveal>
           ))}
         </div>
+
+        {/* View All Projects Button */}
+        <ScrollReveal delay={0.2}>
+          <div className="flex justify-center mt-8">
+            <a
+              href="https://github.com/LSC895?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border/40 bg-accent/50 text-foreground font-medium hover:border-primary/30 hover:bg-accent transition-all duration-300 hover:scale-105"
+            >
+              <Github className="w-5 h-5" />
+              View All Projects
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
+          </div>
+        </ScrollReveal>
       </section>
 
-      {/* Experiments Section */}
+      {/* ASK LUCKY Chatbot Widget */}
       <section className="py-12 sm:py-16">
         <ScrollReveal>
           <motion.div
-            className="text-center py-12 rounded-2xl border border-dashed border-border/40"
+            className="rounded-2xl border border-border/40 overflow-hidden"
+            style={{ backgroundColor: "#0a0a0a" }}
             whileHover={{ borderColor: "hsl(var(--primary) / 0.3)" }}
           >
-            <FlaskConical className="w-10 h-10 mx-auto mb-4 text-muted-foreground/40" />
-            <h3 className="text-xl font-bold text-foreground mb-2">
-              Secret Research Ongoing
-            </h3>
-            <p className="text-sm text-muted-foreground/60 italic">
-              Some experiments are best left unseen... for now 🔬
-            </p>
+            {/* Header */}
+            <div className="flex items-center gap-3 px-6 py-4 border-b border-border/20">
+              <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white" style={{ backgroundColor: "#1D9E75" }}>
+                L
+              </div>
+              <div className="flex-1">
+                <h3 className="text-base font-bold text-white font-mono">ASK L.U.C.K.Y</h3>
+                <p className="text-xs text-neutral-500 font-mono">Linguistic Unit for Consulting & Knowledge for You</p>
+              </div>
+              <div className="w-2 h-2 rounded-full bg-green-500 shadow-md shadow-green-500/50" />
+            </div>
+
+            {/* Chat Content */}
+            <div className="px-6 py-8 space-y-6">
+              {/* Message bubble */}
+              <div className="flex gap-3">
+                <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0" style={{ backgroundColor: "#1D9E75" }}>
+                  L
+                </div>
+                <div className="px-4 py-3 rounded-2xl rounded-tl-sm bg-neutral-800/80 border border-neutral-700/50 max-w-sm">
+                  <p className="text-sm text-neutral-300 font-mono">hey. before we talk — tell me why you're here.</p>
+                </div>
+              </div>
+
+              {/* Who are you label */}
+              <p className="text-xs font-mono uppercase tracking-widest text-neutral-500 pl-11">Who are you?</p>
+
+              {/* Selection buttons */}
+              <div className="flex flex-wrap gap-3 pl-11">
+                {["hiring", "collab", "just curious"].map((option) => (
+                  <motion.button
+                    key={option}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-5 py-2.5 rounded-xl border border-neutral-700 text-neutral-400 font-mono text-sm hover:border-[#1D9E75] hover:text-[#1D9E75] transition-all duration-300 bg-transparent cursor-pointer"
+                  >
+                    {option}
+                  </motion.button>
+                ))}
+              </div>
+            </div>
           </motion.div>
         </ScrollReveal>
       </section>
