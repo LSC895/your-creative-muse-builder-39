@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 
 const roles = [
-  "AI/ML Engineer",
-  "Backend Developer",
-  "Founding Engineer",
-  "Builder",
+  "AI Solutions Consultant",
   "Problem Solver",
+  "Full Stack AI Developer",
+  "Technical Co-Founder",
 ];
 
 const TypewriterEffect = () => {

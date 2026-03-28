@@ -11,6 +11,7 @@ import CareerTimeline from "../components/CareerTimeline";
 import ContactCTA from "../components/ContactCTA";
 import TypewriterEffect from "../components/TypewriterEffect";
 import SearchPalette from "../components/SearchPalette";
+import profileAvatar from "@/assets/profile-avatar.png";
 
 const Home = () => {
   const [showGreeting, setShowGreeting] = useState(true);
@@ -108,8 +109,7 @@ const Home = () => {
 
             <ScrollReveal delay={0.2}>
               <p className="text-lg text-muted-foreground max-w-xl leading-relaxed mb-8">
-                AI/ML Engineer building intelligent systems — from cognitive architectures
-                to production-grade LLM applications.
+                I build AI that works in the real world — RAG pipelines, LLM integrations, and cognitive architectures that go from idea to deployed product. I've helped startups go from zero to funded. Now I'm building my own.
               </p>
             </ScrollReveal>
 
@@ -132,9 +132,7 @@ const Home = () => {
           <ScrollReveal delay={0.2}>
             <div className="relative">
               <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl border-2 border-border/40 bg-accent/30 overflow-hidden shadow-2xl shadow-primary/5">
-                <div className="w-full h-full flex items-center justify-center text-6xl">
-                  🧑‍💻
-                </div>
+                <img src={profileAvatar} alt="Lucky Singh Chauhan" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-2 -right-2 px-3 py-1 rounded-full bg-green-500/20 border border-green-500/40 text-green-500 text-xs font-medium">
                 ✦ Open to work
@@ -172,7 +170,7 @@ const Home = () => {
       <section id="tools" className="py-12 sm:py-16">
         <ScrollReveal>
           <h2 className="text-center text-lg font-mono text-muted-foreground mb-10">
-            {"{ "}Crafting with my Core Tools{" }"}
+            {"{ "}The Tool Kit{" }"}
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>

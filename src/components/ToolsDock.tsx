@@ -5,10 +5,10 @@ const tools = [
   { name: "Terminal", icon: "windowsterminal", color: "#4D4D4D" },
   { name: "Docker", icon: "docker", color: "#2496ED" },
   { name: "GitHub", icon: "github", color: "#181717" },
-  { name: "Postman", icon: "postman", color: "#FF6C37" },
-  { name: "Notion", icon: "notion", color: "#000000" },
-  { name: "Figma", icon: "figma", color: "#F24E1E" },
-  { name: "Chrome", icon: "googlechrome", color: "#4285F4" },
+  { name: "Google Colab", icon: "googlecolab", color: "#F9AB00" },
+  { name: "Brave", icon: "brave", color: "#FB542B" },
+  { name: "Hugging Face", icon: "huggingface", color: "#FFD21E" },
+  { name: "Eraser", icon: "eraser", color: "#1F2937" },
 ];
 
 const ToolsDock = () => {

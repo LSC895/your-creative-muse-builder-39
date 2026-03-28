@@ -3,30 +3,31 @@ import { motion } from "framer-motion";
 interface TechItem {
   name: string;
   icon: string;
+  color: string;
 }
 
 const aiTools: TechItem[] = [
-  { name: "GPT-4", icon: "openai" },
-  { name: "Claude", icon: "anthropic" },
-  { name: "LangChain", icon: "langchain" },
-  { name: "ChromaDB", icon: "chroma" },
-  { name: "HuggingFace", icon: "huggingface" },
-  { name: "PyTorch", icon: "pytorch" },
-  { name: "NumPy", icon: "numpy" },
-  { name: "Pandas", icon: "pandas" },
+  { name: "GPT-4", icon: "openai", color: "412991" },
+  { name: "Claude", icon: "anthropic", color: "191919" },
+  { name: "LangChain", icon: "langchain", color: "1C3C3C" },
+  { name: "ChromaDB", icon: "chroma", color: "FF6446" },
+  { name: "HuggingFace", icon: "huggingface", color: "FFD21E" },
+  { name: "PyTorch", icon: "pytorch", color: "EE4C2C" },
+  { name: "NumPy", icon: "numpy", color: "013243" },
+  { name: "Pandas", icon: "pandas", color: "150458" },
 ];
 
 const backendTools: TechItem[] = [
-  { name: "Python", icon: "python" },
-  { name: "FastAPI", icon: "fastapi" },
-  { name: "Docker", icon: "docker" },
-  { name: "AWS", icon: "amazonaws" },
-  { name: "GCP", icon: "googlecloud" },
-  { name: "Kubernetes", icon: "kubernetes" },
-  { name: "PostgreSQL", icon: "postgresql" },
-  { name: "Redis", icon: "redis" },
-  { name: "Git", icon: "git" },
-  { name: "GitHub Actions", icon: "githubactions" },
+  { name: "Python", icon: "python", color: "3776AB" },
+  { name: "FastAPI", icon: "fastapi", color: "009688" },
+  { name: "Docker", icon: "docker", color: "2496ED" },
+  { name: "AWS", icon: "amazonaws", color: "FF9900" },
+  { name: "GCP", icon: "googlecloud", color: "4285F4" },
+  { name: "Kubernetes", icon: "kubernetes", color: "326CE5" },
+  { name: "PostgreSQL", icon: "postgresql", color: "4169E1" },
+  { name: "Redis", icon: "redis", color: "DC382D" },
+  { name: "Git", icon: "git", color: "F05032" },
+  { name: "GitHub Actions", icon: "githubactions", color: "2088FF" },
 ];
 
 const MarqueeRow = ({ items, reverse = false }: { items: TechItem[]; reverse?: boolean }) => {
@@ -45,9 +46,9 @@ const MarqueeRow = ({ items, reverse = false }: { items: TechItem[]; reverse?: b
             className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-accent/60 border border-border/40 hover:border-primary/30 hover:bg-accent transition-all duration-300 hover:scale-105 cursor-default backdrop-blur-sm"
           >
             <img
-              src={`https://cdn.simpleicons.org/${item.icon}`}
+              src={`https://cdn.simpleicons.org/${item.icon}/${item.color}`}
               alt={item.name}
-              className="w-5 h-5 dark:invert opacity-70"
+              className="w-5 h-5"
               loading="lazy"
             />
             <span className="text-sm font-medium text-muted-foreground whitespace-nowrap">
