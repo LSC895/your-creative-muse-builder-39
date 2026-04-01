@@ -12,6 +12,8 @@ import ContactCTA from "../components/ContactCTA";
 import TypewriterEffect from "../components/TypewriterEffect";
 import SearchPalette from "../components/SearchPalette";
 import AskLucky from "../components/AskLucky";
+import TestimonialMarquee from "../components/TestimonialMarquee";
+import ParticleGrid from "../components/ParticleGrid";
 import profileAvatar from "@/assets/profile-avatar.png";
 
 const Home = () => {
@@ -77,7 +79,8 @@ const Home = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6">
       {/* Hero Section */}
-      <section id="hero" className="pt-28 sm:pt-36 pb-16 sm:pb-24">
+      <section id="hero" className="pt-28 sm:pt-36 pb-16 sm:pb-24 relative">
+        <ParticleGrid />
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
           <div className="flex-1">
             <ScrollReveal>
@@ -176,6 +179,19 @@ const Home = () => {
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <ToolsDock />
+        </ScrollReveal>
+      </section>
+
+      {/* Testimonials */}
+      <section id="testimonials" className="py-12 sm:py-16">
+        <ScrollReveal>
+          <div className="flex items-center gap-4 mb-8">
+            <h2 className="text-lg font-semibold text-foreground whitespace-nowrap">What People Say</h2>
+            <div className="flex-1 h-px bg-border/40" />
+          </div>
+        </ScrollReveal>
+        <ScrollReveal delay={0.1}>
+          <TestimonialMarquee />
         </ScrollReveal>
       </section>
 
