@@ -12,6 +12,8 @@ import ContactCTA from "../components/ContactCTA";
 import TypewriterEffect from "../components/TypewriterEffect";
 import SearchPalette from "../components/SearchPalette";
 import AskLucky from "../components/AskLucky";
+import TestimonialMarquee from "../components/TestimonialMarquee";
+import ParticleGrid from "../components/ParticleGrid";
 import profileAvatar from "@/assets/profile-avatar.png";
 
 const Home = () => {
