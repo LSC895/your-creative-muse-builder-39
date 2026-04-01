@@ -182,6 +182,19 @@ const Home = () => {
         </ScrollReveal>
       </section>
 
+      {/* Testimonials */}
+      <section id="testimonials" className="py-12 sm:py-16">
+        <ScrollReveal>
+          <div className="flex items-center gap-4 mb-8">
+            <h2 className="text-lg font-semibold text-foreground whitespace-nowrap">What People Say</h2>
+            <div className="flex-1 h-px bg-border/40" />
+          </div>
+        </ScrollReveal>
+        <ScrollReveal delay={0.1}>
+          <TestimonialMarquee />
+        </ScrollReveal>
+      </section>
+
       {/* Selected Projects */}
       <section id="projects" className="py-12 sm:py-16">
         <ScrollReveal>
