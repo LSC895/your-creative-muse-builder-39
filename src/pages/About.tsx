@@ -188,13 +188,23 @@ const About = () => {
             <p className="text-muted-foreground mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
               Always open to interesting conversations about tech, entrepreneurship, or collaboration opportunities.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <Button asChild className="group-hover:bg-blue-600 group-hover:hover:bg-blue-700 transition-colors duration-300">
                 <a href="mailto:luckysinghchauhan415@gmail.com">Email Me</a>
               </Button>
               <Button variant="outline" asChild className="group-hover:border-blue-300 dark:group-hover:border-blue-700 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
                 <a href="https://www.linkedin.com/in/lucky-singh-chauhan-87329b255/" target="_blank" rel="noopener noreferrer">
                   LinkedIn <ExternalLink className="ml-2 w-4 h-4" />
+                </a>
+              </Button>
+              <Button variant="outline" asChild className="group-hover:border-blue-300 dark:group-hover:border-blue-700 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
+                <a href="https://github.com/LSC895" target="_blank" rel="noopener noreferrer">
+                  GitHub <ExternalLink className="ml-2 w-4 h-4" />
+                </a>
+              </Button>
+              <Button variant="outline" asChild className="group-hover:border-blue-300 dark:group-hover:border-blue-700 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
+                <a href="https://x.com/Lsc8954" target="_blank" rel="noopener noreferrer">
+                  X (Twitter) <ExternalLink className="ml-2 w-4 h-4" />
                 </a>
               </Button>
             </div>

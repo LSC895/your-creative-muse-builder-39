@@ -103,7 +103,7 @@ const ParticleGrid = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 pointer-events-none"
+      className="fixed inset-0 pointer-events-none z-[-1]"
       style={{ opacity: 0.6 }}
     />
   );

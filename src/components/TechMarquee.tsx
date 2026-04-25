@@ -10,11 +10,11 @@ interface TechItem {
 const aiTools: TechItem[] = [
   { name: "GPT-4", icon: "simple-icons:openai", color: "#412991" },
   { name: "Claude", icon: "simple-icons:anthropic", color: "#191919" },
+  { name: "Gemini", icon: "simple-icons:googlegemini", color: "#8E75B2" },
   { name: "LangChain", icon: "simple-icons:langchain", color: "#1C3C3C" },
   { name: "ChromaDB", icon: "simple-icons:chroma", color: "#FF6446" },
   { name: "HuggingFace", icon: "simple-icons:huggingface", color: "#FFD21E" },
   { name: "PyTorch", icon: "simple-icons:pytorch", color: "#EE4C2C" },
-  { name: "NumPy", icon: "simple-icons:numpy", color: "#013243" },
   { name: "Pandas", icon: "simple-icons:pandas", color: "#150458" },
 ];
 

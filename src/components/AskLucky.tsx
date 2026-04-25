@@ -16,6 +16,7 @@ const LUCKY_BIO = {
   github: "https://github.com/LSC895",
   twitter: "https://x.com/Lsc8954",
   linkedin: "https://www.linkedin.com/in/lucky-singh-chauhan-87329b255/",
+  medium: "https://medium.com/@luckysinghchauhan415",
   skills: ["RAG pipelines", "LLM integrations", "FastAPI", "Docker", "Python", "LangChain", "ChromaDB", "Cognitive Architectures"],
   projects: {
     TATAV: "Cognitive Architecture Engine — the missing piece between LLMs and truly persistent digital beings",
@@ -77,7 +78,7 @@ const getSmartResponse = (input: string, mode: Mode): string => {
 
   // Contact & hiring
   if (lower.includes("contact") || lower.includes("email") || lower.includes("reach") || lower.includes("hire") || lower.includes("available")) {
-    return `You can reach me at:\n\n📧 ${LUCKY_BIO.email}\n🐦 ${LUCKY_BIO.twitter}\n💼 ${LUCKY_BIO.linkedin}\n🐙 ${LUCKY_BIO.github}\n\nI'm currently available for new projects and open to full-time roles!`;
+    return `You can reach me at:\n\n📧 ${LUCKY_BIO.email}\n🐦 ${LUCKY_BIO.twitter}\n💼 ${LUCKY_BIO.linkedin}\n🐙 ${LUCKY_BIO.github}\n📝 ${LUCKY_BIO.medium}\n\nI'm currently available for new projects and open to full-time roles!`;
   }
   if (lower.includes("rate") || lower.includes("cost") || lower.includes("price") || lower.includes("charge")) {
     return "My rates depend on the project scope and complexity. Best to discuss specifics — drop me an email at luckysinghchauhan415@gmail.com and we can figure out what works.";
@@ -134,7 +135,9 @@ const AskLucky = () => {
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messages.length > 1 || isTyping) {
+      chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
   }, [messages, isTyping]);
 
   const handleModeSelect = async (selected: Mode) => {

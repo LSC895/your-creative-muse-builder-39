@@ -116,4 +116,10 @@
     0%, 100% { opacity: 1; }
     50% { opacity: 0.3; }
   }
+
+  .gravity-fall {
+    transition: transform var(--drop-d, 1s) cubic-bezier(0.32, 0, 0.67, 0) !important;
+    transform: translateY(var(--drop-y, 500px)) rotate(var(--drop-r, 10deg)) !important;
+    pointer-events: none !important;
+  }
 }

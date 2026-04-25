@@ -13,7 +13,6 @@ import TypewriterEffect from "../components/TypewriterEffect";
 import SearchPalette from "../components/SearchPalette";
 import AskLucky from "../components/AskLucky";
 import TestimonialMarquee from "../components/TestimonialMarquee";
-import ParticleGrid from "../components/ParticleGrid";
 import profileAvatar from "@/assets/profile-avatar.png";
 
 const Home = () => {
@@ -80,7 +79,6 @@ const Home = () => {
     <div className="max-w-4xl mx-auto px-4 sm:px-6">
       {/* Hero Section */}
       <section id="hero" className="pt-28 sm:pt-36 pb-16 sm:pb-24 relative">
-        <ParticleGrid />
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
           <div className="flex-1">
             <ScrollReveal>

@@ -1,15 +1,23 @@
 import { motion } from "framer-motion";
-import { Home, FolderOpen, BookOpen, Moon, Sun } from "lucide-react";
+import { Menu, BookOpen, Moon, Sun } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import { Link, useLocation } from "react-router-dom";
 
-const BottomDock = () => {
+interface BottomDockProps {
+  onMenuToggle?: () => void;
+}
+
+const BottomDock = ({ onMenuToggle }: BottomDockProps) => {
   const { theme, setTheme } = useTheme();
   const location = useLocation();
 
   const items = [
-    { icon: Home, label: "Home", href: "/" },
-    { icon: FolderOpen, label: "Projects", href: "/projects" },
+    { 
+      icon: Menu, 
+      label: "Menu", 
+      isButton: true,
+      onClick: onMenuToggle 
+    },
     { icon: BookOpen, label: "Blog", href: "/blog" },
     {
       icon: () => (
@@ -32,7 +40,7 @@ const BottomDock = () => {
     >
       <div className="flex items-center gap-1 px-3 py-2.5 rounded-2xl border border-border/40 bg-background/80 backdrop-blur-xl shadow-2xl shadow-black/20">
         {items.map((item) => {
-          const isActive = !item.external && location.pathname === item.href;
+          const isActive = !item.external && !item.isButton && location.pathname === item.href;
           const Icon = item.icon;
 
           if (item.external) {
@@ -48,6 +56,20 @@ const BottomDock = () => {
                   <Icon />
                 </motion.div>
               </a>
+            );
+          }
+
+          if (item.isButton) {
+            return (
+              <button
+                key={item.label}
+                onClick={item.onClick}
+                className="relative p-3 rounded-xl text-muted-foreground hover:text-foreground hover:bg-accent/60 transition-all duration-300"
+              >
+                <motion.div whileHover={{ scale: 1.15, y: -2 }} whileTap={{ scale: 0.95 }}>
+                  <Icon className="w-5 h-5" />
+                </motion.div>
+              </button>
             );
           }
 
