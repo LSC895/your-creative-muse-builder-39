@@ -11,18 +11,18 @@ interface Message {
 
 const LUCKY_BIO = {
   name: "Lucky Singh Chauhan",
-  roles: ["AI Solutions Consultant", "Full Stack AI Developer", "Technical Co-Founder"],
-  email: "luckysinghchauhan415@gmail.com",
+  roles: ["AI Solutions Consultant", "AI Integration Specialist", "Solutions-Focused Builder"],
+  email: "lsc.aisolutions@gmail.com",
   github: "https://github.com/LSC895",
   twitter: "https://x.com/Lsc8954",
   linkedin: "https://www.linkedin.com/in/lucky-singh-chauhan-87329b255/",
   medium: "https://medium.com/@luckysinghchauhan415",
   skills: ["RAG pipelines", "LLM integrations", "FastAPI", "Docker", "Python", "LangChain", "ChromaDB", "Cognitive Architectures"],
   projects: {
-    TATAV: "Cognitive Architecture Engine — the missing piece between LLMs and truly persistent digital beings",
-    Vaani: "Speech therapy tool for individuals with serious speech disorders",
-    Rezoome: "NLP-based resume analysis and generation system, 100+ resumes generated",
-    CHETNA: "Self-learning AI architecture that updates agent personality from lived experience",
+    Roastmycv: "AI-powered resume roasting and fixing platform for Gen-Z job seekers",
+    CoreAthlete: "Sports specific training platform for field and combat athletes & hybrid trainer",
+    Leadsniper: "A full-stack lead generation and outreach automation tool",
+    TATAV: "Cognitive Architecture Engine that gives AI persistent identity and memory",
   },
 };
 
@@ -34,12 +34,12 @@ const modeGreetings: Record<string, Message[]> = {
   ],
   collab: [
     { role: "lucky", text: "Always down to build something cool together. 🤝" },
-    { role: "lucky", text: "I'm currently working on TATAV (cognitive architectures), Vaani (speech tools), and CHETNA (self-learning AI). If any of that excites you — let's jam." },
+    { role: "lucky", text: "I'm currently working on Roastmycv (resume AI), CoreAthlete (sports training), Leadsniper (outreach automation), and TATAV (cognitive architectures). If any of that excites you — let's jam." },
     { role: "lucky", text: "Ask me about my projects, my stack, or pitch me an idea. Let's see if we click." },
   ],
   "just curious": [
     { role: "lucky", text: "Welcome, explorer. 👀" },
-    { role: "lucky", text: "I'm Lucky — an AI engineer who builds things that think. From cognitive architectures to production LLM apps, I like solving problems that matter." },
+    { role: "lucky", text: "I'm Lucky — an AI Integration Specialist who builds things that ship. From cognitive architectures to production LLM apps, I focus on working solutions that go from idea to deployed product." },
     { role: "lucky", text: "Go ahead, ask me anything. I don't bite... usually. 😄" },
   ],
 };
@@ -52,17 +52,17 @@ const getSmartResponse = (input: string, mode: Mode): string => {
   if (lower.includes("tatav") || lower.includes("cognitive")) {
     return "TATAV is my passion project — a Cognitive Architecture Engine. Think of it as the missing layer between LLMs and truly persistent digital beings. It gives AI memory, personality, and reasoning that persists across sessions. Built with Python, LangChain, ChromaDB, and FastAPI.";
   }
-  if (lower.includes("vaani") || lower.includes("speech")) {
-    return "Vaani is a speech therapy tool I built for people with serious speech disorders. It uses Whisper for STT and provides real-time feedback to help users improve. It's deeply personal to me — tech should help people who need it most.";
+  if (lower.includes("roastmycv") || lower.includes("resume")) {
+    return "Roastmycv is an AI-powered resume roasting and fixing platform. It's designed for Gen-Z job seekers to get instant, honest feedback on their resumes and fix them for every job. Built with Next.js 14, Supabase, Clerk, and Google Gemini.";
   }
-  if (lower.includes("rezoome") || lower.includes("resume")) {
-    return "Rezoome is an NLP-based resume optimizer. Feed it a job description and your resume, and it generates an ATS-optimized version. Already generated 100+ resumes with automated content optimization.";
+  if (lower.includes("coreathlete") || lower.includes("sports") || lower.includes("training")) {
+    return "CoreAthlete is a sports-specific training platform for field and combat athletes. It's a hybrid trainer that helps athletes train for their peak. Built with Next.js 14, Supabase, and Anthropic's Claude.";
   }
-  if (lower.includes("chetna") || lower.includes("self-learning") || lower.includes("self learning")) {
-    return "CHETNA is a self-learning AI architecture. It updates its personality and behavior from lived experience — no retraining, no human intervention. Think of it as an AI that genuinely grows over time. Built with Python, NumPy, SQLite, and ChromaDB.";
+  if (lower.includes("leadsniper") || lower.includes("outreach") || lower.includes("lead gen")) {
+    return "Leadsniper is a full-stack lead generation and outreach automation tool. It automates the process of finding and engaging leads with AI-personalized messaging. Built with Next.js 14, Supabase, and Google Gemini.";
   }
   if (lower.includes("project")) {
-    return `I'm working on 4 key projects right now:\n\n🧠 TATAV — Cognitive Architecture Engine\n🗣️ Vaani — Speech therapy tool\n📄 Rezoome — AI resume optimizer\n🤖 CHETNA — Self-learning AI\n\nAsk me about any of them!`;
+    return `I'm working on 4 key projects right now:\n\n📄 Roastmycv — AI Resume Roaster\n🏋️‍♂️ CoreAthlete — Sports Training Platform\n🎯 Leadsniper — Outreach Automation\n🧠 TATAV — Cognitive Architecture Engine\n\nAsk me about any of them!`;
   }
 
   // Skills & tech
@@ -81,17 +81,17 @@ const getSmartResponse = (input: string, mode: Mode): string => {
     return `You can reach me at:\n\n📧 ${LUCKY_BIO.email}\n🐦 ${LUCKY_BIO.twitter}\n💼 ${LUCKY_BIO.linkedin}\n🐙 ${LUCKY_BIO.github}\n📝 ${LUCKY_BIO.medium}\n\nI'm currently available for new projects and open to full-time roles!`;
   }
   if (lower.includes("rate") || lower.includes("cost") || lower.includes("price") || lower.includes("charge")) {
-    return "My rates depend on the project scope and complexity. Best to discuss specifics — drop me an email at luckysinghchauhan415@gmail.com and we can figure out what works.";
+    return "My rates depend on the project scope and complexity. Best to discuss specifics — drop me an email at lsc.aisolutions@gmail.com and we can figure out what works.";
   }
 
   // Experience
   if (lower.includes("experience") || lower.includes("background") || lower.includes("work history")) {
-    return "I'm a Founding Engineer focused on AI/ML & Backend. I've architected production-grade LLM applications using RAG, deployed scalable AI APIs via FastAPI and Docker with 99.9% uptime, and co-founded Xtrapp where I designed scalable backends. Currently building my own AI ventures.";
+    return "I'm an AI Solutions Consultant and Integration Specialist. I help businesses figure out where AI actually fits, then I build it and ship it. I've architected production-grade LLM applications, deployed scalable AI APIs, and helped startups go from zero to funded. No research, no fluff. Just working solutions.";
   }
 
   // Personal
   if (lower.includes("who are you") || lower.includes("about you") || lower.includes("tell me about")) {
-    return "I'm Lucky Singh Chauhan — an AI Solutions Consultant, Full Stack AI Developer, and Technical Co-Founder. I build AI that works in the real world. From cognitive architectures to production LLM apps, I focus on solving problems that actually matter. Currently building my own AI ventures.";
+    return "I'm Lucky Singh Chauhan — an AI Integration Specialist and Solutions-Focused Builder. I help businesses figure out where AI actually fits, then I build it and ship it. No research, no fluff. Just working solutions that go from idea to deployed product.";
   }
   if (lower.includes("hello") || lower.includes("hi ") || lower.includes("hey") || lower === "hi") {
     return "Hey! 👋 What would you like to know? I can talk about my projects, tech stack, experience, or anything else that's on your mind.";
@@ -117,7 +117,7 @@ const getSmartResponse = (input: string, mode: Mode): string => {
 
   // Generic fallbacks
   const generic = [
-    "That's interesting! Feel free to ask me about my projects (TATAV, Vaani, Rezoome, CHETNA), my tech stack, or my experience. I'm happy to chat about anything.",
+    "That's interesting! Feel free to ask me about my projects (Roastmycv, CoreAthlete, Leadsniper, TATAV), my tech stack, or my experience. I'm happy to chat about anything.",
     "Good question! I'd recommend checking out my projects section above — but I'm also happy to explain anything here. What catches your eye?",
     `Love the curiosity! Ask me about anything — AI, my projects, career advice, or how to reach me. I'm an open book.`,
     "Ha, I like your energy! 😄 Try asking me about my tech stack, a specific project, or how I can help with your next AI venture.",

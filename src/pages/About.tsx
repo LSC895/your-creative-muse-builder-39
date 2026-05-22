@@ -6,7 +6,7 @@ import { MapPin, Calendar, ExternalLink, Award, Users, Rocket } from "lucide-rea
 const About = () => {
   const experiences = [
     {
-      role: "Founding Engineer – AI/ML & Backend",
+      role: "AI Solutions Consultant",
       company: "Freelance / Contract",
       period: "Mar 2025 – Present",
       location: "Remote",
@@ -59,7 +59,7 @@ const About = () => {
       <div className="text-center mb-12">
         <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20">
           <img 
-            src="/lovable-uploads/cff4f4f9-614b-4eda-9fbb-c29657da9431.png" 
+            src="/uploads/cff4f4f9-614b-4eda-9fbb-c29657da9431.png" 
             alt="LSC Profile" 
             className="w-full h-full object-cover"
           />
@@ -190,7 +190,7 @@ const About = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button asChild className="group-hover:bg-blue-600 group-hover:hover:bg-blue-700 transition-colors duration-300">
-                <a href="mailto:luckysinghchauhan415@gmail.com">Email Me</a>
+                <a href="mailto:lsc.aisolutions@gmail.com">Email Me</a>
               </Button>
               <Button variant="outline" asChild className="group-hover:border-blue-300 dark:group-hover:border-blue-700 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
                 <a href="https://www.linkedin.com/in/lucky-singh-chauhan-87329b255/" target="_blank" rel="noopener noreferrer">

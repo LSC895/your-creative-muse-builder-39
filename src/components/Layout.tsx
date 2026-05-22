@@ -113,9 +113,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             : "bg-background/60 border-border/30 shadow-md shadow-black/5"
         }`}>
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">L</span>
-            </div>
+            <img src="/logo.png" alt="Logo" className="w-8 h-8 rounded-lg object-contain" />
           </Link>
 
           <div className="flex items-center gap-2">
@@ -197,6 +195,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 </a>
                 <a href="https://x.com/Lsc8954" target="_blank" rel="noopener noreferrer" className="text-muted-foreground/40 hover:text-foreground transition-all duration-300 hover:scale-110">
                   <Icon icon="simple-icons:x" className="w-5 h-5" />
+                </a>
+                <a href="mailto:lsc.aisolutions@gmail.com" className="text-muted-foreground/40 hover:text-foreground transition-all duration-300 hover:scale-110">
+                  <Icon icon="lucide:mail" className="w-5 h-5" />
                 </a>
                 <a href="https://medium.com/@luckysinghchauhan415" target="_blank" rel="noopener noreferrer" className="text-muted-foreground/40 hover:text-foreground transition-all duration-300 hover:scale-110">
                   <Icon icon="simple-icons:medium" className="w-5 h-5" />

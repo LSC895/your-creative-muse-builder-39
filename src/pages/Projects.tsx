@@ -6,44 +6,44 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "Tatav",
-      description: "Cognitive Architecture Engine — The missing piece between LLMs and truly persistent digital beings.",
-      technologies: ["Python", "LangChain", "ChromaDB", "FastAPI", "Claude API"],
-      category: "AI/Cognitive",
-      status: "In Development",
-      period: "May 2025 – Present",
-      liveUrl: null,
-      githubUrl: null,
+      title: "Roastmycv",
+      description: "AI-powered resume roasting and fixing platform for Gen-Z job seekers. Provides instant feedback, tone analysis, and automated improvements for modern resumes.",
+      technologies: ["Next.js 14", "Supabase", "Clerk", "Google Gemini", "Vercel", "Razorpay"],
+      category: "AI/SaaS",
+      status: "Beta",
+      period: "Jul 2025 – Present",
+      liveUrl: "https://roastmycv.vercel.app",
+      githubUrl: "https://github.com/LSC895/rezoome-roast",
     },
     {
-      title: "Vaani",
-      description: "Speek more! Stress less! — Built a tool for individuals with serious speech disorder to help them improve it.",
-      technologies: ["Whisper", "Supabase", "STT", "Clerk"],
+      title: "CoreAthlete",
+      description: "Sports specific training platform for field and combat athletes. Features hybrid training programs, performance tracking, and personalized athlete development paths.",
+      technologies: ["Next.js 14", "Supabase", "Anthropic's Claude", "Vercel"],
       category: "Health Tech",
       status: "In Development",
       period: "Nov 2025 – Present",
       liveUrl: null,
-      githubUrl: null,
+      githubUrl: "https://github.com/LSC895",
     },
     {
-      title: "Rezoome",
-      description: "One resume for every job! — Developed an NLP-based resume analysis and generation system. Implemented text parsing, keyword extraction, and ATS-aligned formatting logic. Generated 100+ resumes with automated content optimisation.",
-      technologies: ["NLP", "Python", "AI/ML", "ATS"],
-      category: "AI/SaaS",
+      title: "Leadsniper",
+      description: "A full-stack lead generation and outreach automation tool. Automates the discovery and engagement of high-potential leads using intelligent filtering and personalized outreach.",
+      technologies: ["Next.js 14", "Supabase", "Google Gemini", "Vercel"],
+      category: "Sales Tech",
       status: "In Development",
-      period: "Jul 2025 – Present",
+      period: "Jan 2026 – Present",
       liveUrl: null,
-      githubUrl: null,
+      githubUrl: "https://github.com/LSC895/leadsniper",
     },
     {
-      title: "CHETNA",
-      description: "Self-Learning AI Architecture — A behavioral learning system that updates agent personality from lived experience — no retraining, no human intervention.",
-      technologies: ["Python", "NumPy", "SQLite", "ChromaDB"],
+      title: "Tatav",
+      description: "Cognitive Architecture Engine — giving any AI agent persistent identity, memory, and cross-environment reasoning through a specialized architectural layer.",
+      technologies: ["Python", "LangChain", "ChromaDB", "FastAPI", "Ollama"],
       category: "AI Research",
-      status: "In Development",
-      period: "Mar 2026 – Present",
+      status: "Beta",
+      period: "May 2025 – Present",
       liveUrl: null,
-      githubUrl: null,
+      githubUrl: "https://github.com/LSC895/TATAV",
     },
   ];
 
@@ -127,7 +127,7 @@ const Projects = () => {
       <div className="text-center mt-16 pt-8 border-t border-border/40">
         <p className="text-muted-foreground mb-6">Interested in collaborating or have questions about any project?</p>
         <Button asChild>
-          <a href="mailto:luckysinghchauhan415@gmail.com">Get in Touch</a>
+          <a href="mailto:lsc.aisolutions@gmail.com">Get in Touch</a>
         </Button>
       </div>
     </div>

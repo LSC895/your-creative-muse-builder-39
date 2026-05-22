@@ -126,7 +126,7 @@ const Ideas = () => {
           I'd love to hear your thoughts on these ideas or discuss potential collaborations.
         </p>
         <a 
-          href="mailto:luckysinghchauhan415@gmail.com" 
+          href="mailto:lsc.aisolutions@gmail.com" 
           className="inline-flex items-center text-foreground hover:text-foreground/80 font-medium transition-colors duration-300"
         >
           Let's brainstorm together →

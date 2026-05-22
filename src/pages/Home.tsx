@@ -20,36 +20,36 @@ const Home = () => {
 
   const projects = [
     {
-      title: "Tatav",
-      tagline: "Cognitive Architecture Engine",
-      description: "The missing piece between LLMs and truly persistent digital beings.",
-      tech: ["Python", "LangChain", "ChromaDB", "FastAPI", "Claude API"],
-      period: "May 2025 – Present",
-      github: "https://github.com/LSC895",
+      title: "Roastmycv",
+      tagline: "One resume for every job!",
+      description: "AI-powered resume roasting and fixing platform for Gen-Z job seekers",
+      tech: ["Next.js 14", "Supabase", "Clerk", "Google Gemini", "Vercel", "Razorpay"],
+      period: "Jul 2025 – Present",
+      github: "https://github.com/LSC895/rezoome-roast",
     },
     {
-      title: "Vaani",
-      tagline: "Speek more! Stress less!",
-      description: "Built a tool for individuals with serious speech disorder to help them improve it.",
-      tech: ["Whisper", "Supabase", "STT", "Clerk"],
+      title: "CoreAthlete",
+      tagline: "Train for your peak!",
+      description: "Sports specific training platform for field and combat athletes & hybrid trainer",
+      tech: ["Next.js 14", "Supabase", "Anthropic's Claude", "Vercel"],
       period: "Nov 2025 – Present",
       github: "https://github.com/LSC895",
     },
     {
-      title: "Rezoome",
-      tagline: "One resume for every job!",
-      description: "NLP-based resume analysis and generation system. Generated 100+ resumes with automated content optimisation.",
-      tech: ["NLP", "Python", "AI/ML", "ATS"],
-      period: "Jul 2025 – Present",
-      github: "https://github.com/LSC895",
+      title: "Leadsniper",
+      tagline: "Outreact automation tool!",
+      description: "A full-stack lead generation and outreach automation tool",
+      tech: ["Next.js 14", "Supabase", "Google Gemini", "Vercel"],
+      period: "Jan 2026 – Present",
+      github: "https://github.com/LSC895/leadsniper",
     },
     {
-      title: "CHETNA",
-      tagline: "Self-Learning AI Architecture",
-      description: "A behavioral learning system that updates agent personality from lived experience — no retraining, no human intervention.",
-      tech: ["Python", "NumPy", "SQLite", "ChromaDB"],
-      period: "Mar 2026 – Present",
-      github: "https://github.com/LSC895",
+      title: "Tatav",
+      tagline: "Cognitive Architecture Engine!",
+      description: "A Cognitive Architecture that gives any AI agent persistent identity, memory, and cross-environment reasoning.",
+      tech: ["Python", "LangChain", "ChromaDB", "FastAPI", "Ollama"],
+      period: "May 2025 – Present",
+      github: "https://github.com/LSC895/TATAV",
     },
   ];
 
@@ -111,20 +111,20 @@ const Home = () => {
 
             <ScrollReveal delay={0.2}>
               <p className="text-lg text-muted-foreground max-w-xl leading-relaxed mb-8">
-                I build AI that works in the real world — RAG pipelines, LLM integrations, and cognitive architectures that go from idea to deployed product. I've helped startups go from zero to funded. Now I'm building my own.
+                I help businesses figure out where AI actually fits, then I build it and ship it. No research, no fluff. Just working solutions that go from idea to deployed product.
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
               <div className="flex flex-wrap gap-3">
                 <Badge variant="secondary" className="px-3 py-1.5 text-sm bg-accent/80">
-                  🧠 AI/ML Engineer
+                  🔗 AI Integration Specialist
                 </Badge>
                 <Badge variant="secondary" className="px-3 py-1.5 text-sm bg-accent/80">
-                  ⚡ Founding Engineer
+                  🎯 Solutions-Focused Builder
                 </Badge>
                 <Badge variant="secondary" className="px-3 py-1.5 text-sm bg-accent/80">
-                  🚀 Builder
+                  🚀 AI Solutions Consultant
                 </Badge>
               </div>
             </ScrollReveal>
@@ -220,9 +220,9 @@ const Home = () => {
                 <div className="h-36 sm:h-40 bg-accent/30 border-b border-border/20 flex items-center justify-center">
                   <span className="text-4xl opacity-60">
                     {project.title === "Tatav" && "🧠"}
-                    {project.title === "Vaani" && "🗣️"}
-                    {project.title === "Rezoome" && "📄"}
-                    {project.title === "CHETNA" && "🤖"}
+                    {project.title === "CoreAthlete" && "🏋️‍♂️"}
+                    {project.title === "Roastmycv" && "📄"}
+                    {project.title === "Leadsniper" && "🎯"}
                   </span>
                 </div>
 

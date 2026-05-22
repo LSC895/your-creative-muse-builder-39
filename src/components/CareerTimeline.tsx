@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 
 const experiences = [
   {
-    role: "Founding Engineer – AI/ML & Backend",
+    role: "AI Solutions Consultant",
     company: "Freelance / Contract",
     period: "Mar 2025 – Present",
     location: "Remote",

@@ -20,7 +20,7 @@ const socials = [
   },
   {
     name: "Gmail",
-    href: "mailto:luckysinghchauhan415@gmail.com",
+    href: "mailto:lsc.aisolutions@gmail.com",
     icon: Mail,
   },
   {
